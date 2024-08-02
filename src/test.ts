@@ -31,35 +31,18 @@ async function test() {
         method: 'GET',
         path: '/ipfs/QmVHbLYhhYA5z6yKpQr4JWr3D54EhbSsh7e7BFAAyrkkMf',
         queries: {
-            chatQuery: ["Who are you?"],
-            openAiModel: ["gpt-4o"]
         },
-        secret: { openaiApiKey: process.env.OPENAI_API_KEY },
+        secret: { alloraApiKey: process.env.ALLORA_API_KEY },
         headers: {},
     })
     console.log('GET RESULT:', JSON.parse(getResult))
-
-    const postResult = await execute({
-        method: 'POST',
-        path: '/ipfs/QmVHbLYhhYA5z6yKpQr4JWr3D54EhbSsh7e7BFAAyrkkMf',
-        queries: {
-            chatQuery: ["When did humans land on the moon?"],
-            openAiModel: ["gpt-4o"]
-        },
-        secret: { openaiApiKey: process.env.OPENAI_API_KEY },
-        headers: {},
-        body: JSON.stringify(sampleInput)
-    })
-    console.log('POST RESULT:', JSON.parse(postResult))
 
     const testArgsString = JSON.stringify({
         method: 'GET',
         path: '/ipfs/QmVHbLYhhYA5z6yKpQr4JWr3D54EhbSsh7e7BFAAyrkkMf',
         queries: {
-            chatQuery: ["Who are you?"],
-            openAiModel: ["gpt-4o"]
         },
-        secret: { openaiApiKey: "OPENAI_API_KEY" },
+        secret: { alloraApiKey: "ALLORA_API_KEY" },
         headers: {},
     })
     console.log(`\nTo test in the SideVM playground go to https://phat.phala.network/contracts/view/0xf0a398600f02ea9b47a86c59aed61387e450e2a99cb8b921cd1d46f734e45409\n\nConnect you polkadot.js account and select 'run_js' with the parameters:\n- engine: SidevmQuickJSWithPolyfill\n- js_code: Source code text of dist/index.ts\n- args: ${testArgsString}`);

@@ -1,22 +1,18 @@
 <div align="center">
-  <a href="https://github.com/Phala-Network/ai-agent-template-openai">
-    <h1>AI Agent Contract Template with OpenAI</h1>
+  <a href="https://github.com/Phala-Network/ai-agent-template-allora">
+    <h1>AI Agent Contract Template with Allora</h1>
     <img height="320" src="./public/AI-Agent-Contract.jpg" />
-    <br />
-  </a>
-  <a href="https://platform.openai.com/docs/api-reference">
-    <img height="32" src="public/powered-by-openai-badge-filled-on-light.svg" />
     <br />
   </a>
   <p align="center">
     Host your AI Agent Contract on Phala's decentralized serverless cloud.
     <br />
-    <a href="https://github.com/Phala-Network/ai-agent-template-openai"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Phala-Network/ai-agent-template-allora"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="QmQu9AmBL13tyGpxgg5ASt96WQ669p63rnJRWiAo9st8ns/0?key=c0c0105ba56276cd&chatQuery=When%20did%20humans%20land%20on%20the%20moon">View Demo</a>
+    <a href="https://agents.phala.network/ipfs/QmYYXm467aK4Ey1zGwVW7SiTao6FKzXGo8E6c8v8DqnqVe/0?key=ff8b15ee63157768">View Demo</a>
     ·
-    <a href="https://github.com/Phala-Network/ai-agent-template-openai/issues">Report Bug</a>
+    <a href="https://github.com/Phala-Network/ai-agent-template-allora/issues">Report Bug</a>
     ·
     <a href="https://discord.gg/DXGGJajW">Discord</a>
   </p>
@@ -31,7 +27,7 @@
   <img height="240" src="https://www.jlwranglerforums.com/forum/attachments/zoolander-gif.325299/">
 </div>
 
-The OpenAI AI Agent template is a **MINIMAL** template to build an AI Agent that can be hosted on Phala Network's decentralized hosting protocol. Unlike Vercel or other FaaS, it allows you to publish your AI Agent compiled code to IPFS and hosts it on a fully decentralized FaaS cloud with the following benefits:
+The Allora AI Agent template is a **MINIMAL** template to build an AI Agent that can be hosted on Phala Network's decentralized hosting protocol. Unlike Vercel or other FaaS, it allows you to publish your AI Agent compiled code to IPFS and hosts it on a fully decentralized FaaS cloud with the following benefits:
 
 - 💨 Ship Fast: Build and ship with familiar toolchain in minutes
 - ⛑️ Secure: Execution guarded by rock solid TEE / Intel SGX
@@ -48,14 +44,14 @@ npm install
 ```
 
 ### Testing Locally
-Create `.env` file and add your OpenAI API Key
+Create `.env` file and add your Allora API Key
 ```shell
 cp .env.example .env
 ```
 
-In `.env` file replace `YOUR_OPENAI_KEY` with your API Key
+In `.env` file replace `YOUR_ALLORA_KEY` with your API Key
 ```text
-OPENAI_API_KEY="YOUR_OPENAI_KEY"
+ALLORA_API_KEY="YOUR_ALLORA_KEY"
 ```
 
 Build your Agent
@@ -70,11 +66,9 @@ npm run test
 
 Expected Test Results
 ```shell
-
-> phat-gpt-template@0.0.1 test
-> tsx src/test.ts
-
-INPUT: {"method":"GET","path":"/ipfs/QmVHbLYhhYA5z6yKpQr4JWr3D54EhbSsh7e7BFAAyrkkMf","queries":{"chatQuery":["Who are you?"],"openAiModel":["gpt-4o"]},"secret":{"openaiApiKey":"OPENAI_API_KEY"},"headers":{}}
+INPUT: {"method":"GET","path":"/ipfs/QmVHbLYhhYA5z6yKpQr4JWr3D54EhbSsh7e7BFAAyrkkMf","queries":{},"secret":{"alloraApiKey":"UP-c6ebdef4703d412881a3f349"},"headers":{}}
+{"request_id":"e96a7612-debb-47ed-8465-1762365b0357","status":true,"data":{"signature":"0xbfb5d4e16e86180ecba10823f5a99eb08184a22b6433a68b40391ac50efcd94c247474c804b531d117ec10e61bae22a97fb9c9a3a06bf9634389306f2f72ae8e1b","inference_data":{"network_inference":"68577670693603340000000","confidence_interval_percentiles":[],"confidence_interval_values":[],"topic_id":"3","timestamp":1722570312,"extra_data":"0xe98e2830be1a7e4156d656a7505e65d08c67660dc618072422e9c78053c261e9"}}}
+{"request_id":"d32d5d95-af6f-4b4b-b856-98d64eeeaf25","status":true,"data":{"signature":"0x17276c6b64785551eea46cb25e74d9c680bf79cafdfeef8ffba7ce98e48f2a081ed604b6145eae61d1698445bbbe264f15d375747c0ef645adbf42015050e1ba1c","inference_data":{"network_inference":"67704219253489110000000","confidence_interval_percentiles":[],"confidence_interval_values":[],"topic_id":"4","timestamp":1722570312,"extra_data":"0xe98e2830be1a7e4156d656a7505e65d08c67660dc618072422e9c78053c261e9"}}}
 GET RESULT: {
   status: 200,
   body: '\n' +
@@ -86,21 +80,13 @@ GET RESULT: {
     '        </head>\n' +
     '        <body>\n' +
     '            <div align="center">\n' +
-    '                <p>"OpenAI AI Agent Contract hosted on <a href="https://github.com/Phala-Network/ai-agent-template-openai">Phala Network</a>, an AI Coprocessor for hosting AI Agents."</p>\n' +
+    '                <p>"Allora AI Agent Contract hosted on <a href="https://github.com/Phala-Network/ai-agent-template-allora">Phala Network</a>, an AI Coprocessor for hosting AI Agents."</p>\n' +
     '                <img src="https://i.imgur.com/8B3igON.png" width="600" alt="AI Agent Contract" />\n' +
-    '                <p>I am an AI language model created by OpenAI, designed to assist with information, answer questions, and provide support on a wide range of topics. How can I help you today?</p>\n' +
+    '                <p>BTC Price Prediction in 10 mins: $68577.67069360334</p>\n' +
+    '                <p>BTC Price Prediction in 24 hours: $67704.21925348911</p>\n' +
     '            </div>\n' +
     '        </body>\n' +
     '    </html>',
-  headers: {
-    'Content-Type': 'text/html; charset=UTF-8',
-    'Access-Control-Allow-Origin': '*'
-  }
-}
-INPUT: {"method":"POST","path":"/ipfs/QmVHbLYhhYA5z6yKpQr4JWr3D54EhbSsh7e7BFAAyrkkMf","queries":{"chatQuery":["When did humans land on the moon?"],"openAiModel":["gpt-4o"]},"secret":{"openaiApiKey":"OPENAI_API_KEY"},"headers":{},"body":"{\"untrustedData\":{\"fid\":2,\"url\":\"https://fcpolls.com/polls/1\",\"messageHash\":\"0xd2b1ddc6c88e865a33cb1a565e0058d757042974\",\"timestamp\":1706243218,\"network\":1,\"buttonIndex\":2,\"castId\":{\"fid\":226,\"hash\":\"0xa48dd46161d8e57725f5e26e34ec19c13ff7f3b9\"}},\"trustedData\":{\"messageBytes\":\"d2b1ddc6c88e865a33cb1a565e0058d757042974...\"}}"}
-POST RESULT: {
-  status: 200,
-  body: 'Not Implemented',
   headers: {
     'Content-Type': 'text/html; charset=UTF-8',
     'Access-Control-Allow-Origin': '*'
@@ -112,10 +98,10 @@ To test in the SideVM playground go to https://phat.phala.network/contracts/view
 Connect you polkadot.js account and select 'run_js' with the parameters:
 - engine: SidevmQuickJSWithPolyfill
 - js_code: Source code text of dist/index.ts
-- args: {"method":"GET","path":"/ipfs/QmVHbLYhhYA5z6yKpQr4JWr3D54EhbSsh7e7BFAAyrkkMf","queries":{"chatQuery":["Who are you?"],"openAiModel":["gpt-4o"]},"secret":{"openaiApiKey":"OPENAI_API_KEY"},"headers":{}}
+- args: {"method":"GET","path":"/ipfs/QmVHbLYhhYA5z6yKpQr4JWr3D54EhbSsh7e7BFAAyrkkMf","queries":{},"secret":{"alloraApiKey":"ALLORA_API_KEY"},"headers":{}}
 Watch video here for to see the visual steps of testing in Sidevm playground: https://www.youtube.com/watch?v=fNqNeLfFFME
 
-Make sure to replace queries and secret with your values compatible with your AI Agent Contract.
+Make sure to replace queries and secret with your values compatible with your AI Agent Contract.```
 ```
 
 ### Publish Your AI Agent
@@ -176,28 +162,28 @@ By default, all the compiled JS code is visible for anyone to view if they look 
 <details>
 <summary><b>How to Add Secrets</b></summary>
 
-The steps to add a `secret` is simple. We will add the [OpenAI](https://platform.openai.com/docs/quickstart?context=node) API Key in this example by creating a secret JSON object with the `openaiApiKey`:
+The steps to add a `secret` is simple. We will add the [Allora](https://developer.upshot.xyz/) API Key in this example by creating a secret JSON object with the `alloraApiKey`:
 
 ```json
-{"openaiApiKey": "<OPENAI_API_KEY>"}
+{"alloraApiKey": "<ALLORA_API_KEY>"}
 ```
 
 Then in your frame code, you will be able to access the secret key via `req.secret` object:
 
 ```js
 async function POST(req: Request): Promise<Response> {
-    const apiKey = req.secret?.apiKey
+    const apiKey = req.secret?.alloraApiKey
 }
 ```
 
 > **Note**: Before continuing, make sure to publish your compiled AI Agent JS code, so you can add secrets to the CID.
 
 **Open terminal**
-Use `curl` to `POST` your secrets to `https://agents.phala.network/vaults`. Replace `IPFS_CID` with the CID to the compile JS code in IPFS, and replace `<OPENAI_API_KEY>` with your OpenAI API key. Note that you can name the secret field name something other than `openaiApiKey`, but you will need to access the key in your `index.ts` file with the syntax `req.secret?.<your-secret-field-name> as string`
+Use `curl` to `POST` your secrets to `https://agents.phala.network/vaults`. Replace `IPFS_CID` with the CID to the compile JS code in IPFS, and replace `<ALLORA_API_KEY>` with your Allora API key. Note that you can name the secret field name something other than `alloraApiKey`, but you will need to access the key in your `index.ts` file with the syntax `req.secret?.<your-secret-field-name> as string`
 
 The command will look like this:
 ```shell
-curl https://agents.phala.network/vaults -H 'Content-Type: application/json' -d '{"cid": "IPFS_CID", "data": {"openaiApiKey": "<OPENAI_API_KEY>"}}'
+curl https://agents.phala.network/vaults -H 'Content-Type: application/json' -d '{"cid": "IPFS_CID", "data": {"alloraApiKey": "<ALLORA_API_KEY>"}}'
 # Output:
 # {"token":"e85ae53d2ba4ca8d","key":"e781ef31210e0362","succeed":true}
 ```
@@ -211,7 +197,7 @@ curl https://agents.phala.network/vaults/<key>/<token>
 
 Expected output:
 ```shell
-{"data":{"openaiApiKey":"<OPENAI_API_KEY>"},"succeed":true}
+{"data":{"alloraApiKey":"<ALLORA_API_KEY>"},"succeed":true}
 ```
 
 If you are using secrets, make sure that your URL is set in the following syntax where `cid` is the IPFS CID of your compiled JS file and `key` is the `key` from adding secrets to your vault.
@@ -220,7 +206,7 @@ https://agents.phala.network/ipfs/<cid>?key=<key>
 ```
 
 Example:
-https://agents.phala.network/ipfs/Qma2WjqWqW8wYG2tEQ9YFUgyVrMDA9VzvkkdeFny7Smn3R/0?key=686df81d326fa5f2&chatQuery=When%20did%20humans%20land%20on%20the%20moon
+https://agents.phala.network/ipfs/QmYYXm467aK4Ey1zGwVW7SiTao6FKzXGo8E6c8v8DqnqVe/0?key=ff8b15ee63157768
 
 </details>
 
@@ -230,7 +216,6 @@ To help create custom logic, we have an array variable named `queries` that can 
 const query = req.queries.chatQuery[0] as string;
 ```
 The example at https://agents.phala.network/ipfs/Qma2WjqWqW8wYG2tEQ9YFUgyVrMDA9VzvkkdeFny7Smn3R/0?key=686df81d326fa5f2&chatQuery=When%20did%20humans%20land%20on%20the%20moon will have a value of `When did humans land on the moon`. `queries` can have any field name, so `chatQuery` is just an example of a field name and not a mandatory name, but remember to update your `index.ts` file logic to use your expected field name.
-
 
 ## FAQ
 
@@ -255,7 +240,7 @@ The example at https://agents.phala.network/ipfs/Qma2WjqWqW8wYG2tEQ9YFUgyVrMDA9V
   <li>Available features: ES2023, async, fetch, setTimeout, setInterval, bigint</li>
   <li>Resource limits</li>
   <ul>
-    <li>Max execution time ~60s</li>
+    <li>Max execution time ~120s</li>
     <li>Max memory usage: 16 mb</li>
     <li>Max code size: 500 kb</li>
     <li>Limited CPU burst: CPU time between async calls is limited. e.g. Too complex for-loop may hit the burst limit.</li>

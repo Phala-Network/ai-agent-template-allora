@@ -1,5 +1,5 @@
 {
-  "name": "ai-agent-openai-template",
+  "name": "ai-agent-allora-template",
   "version": "0.0.1",
   "license": "MIT",
   "engines": {
@@ -14,11 +14,10 @@
   "devDependencies": {
     "@phala/fn": "^0.2.22",
     "dotenv": "^16.4.5",
-    "thirdweb": "^5.32.3",
     "tsx": "^4.7.1",
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "openai": "^4.52.3"
+    "viem": "^2.18.7"
   }
 }
